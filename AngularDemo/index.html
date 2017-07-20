@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angularmodel.js"></script>
+</head>
+<body ng-app="myModule" >
+    mask age :<input type="checkbox" ng-model="check"/>
+    </br>
+    search : <input type="text" placeholder="search" ng-model="searchtext.name"/> 
+    </br></br>
+    <table ng-controller="myController">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Gender</td  >
+                <td ng-hide="check">Age</td>
+                <td ng-show="check">Age</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="emp  in employee | filter : searchtext" >
+                <td>{{emp.name }}</td>
+                <td>{{emp.gender }}</td>
+                <td ng-hide="check">{{emp.age }}</td>
+                <td ng-show="check">###</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</body>
+</html>
