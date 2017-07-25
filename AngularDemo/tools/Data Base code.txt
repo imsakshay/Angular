@@ -1,0 +1,17 @@
+﻿use AngularDemo
+go
+
+create table tblEmployees
+(
+
+	Id int Primary Key Identity,
+	Name nvarchar(50),
+	Gender nvarchar(10),
+	Salary int
+)
+Go
+Insert into tblEmployees values('Ben','Male',65000)
+Insert into tblEmployees values('Max','Male',85000)
+Insert into tblEmployees values('Sarah','Female',67000)
+Insert into tblEmployees values('Mark','Male',88000)
+Insert into tblEmployees values('Tony','Male',55000)

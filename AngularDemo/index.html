@@ -16,15 +16,15 @@
             <tr>
                 <td>Name</td>
                 <td>Gender</td  >
-                <td ng-hide="check">Age</td>
-                <td ng-show="check">Age</td>
+                <td ng-hide="check">Salary</td>
+                <td ng-show="check">Salary</td>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="emp  in employee | filter : searchtext" >
+            <tr ng-repeat="emp  in employees | filter : searchtext" >
                 <td>{{emp.name }}</td>
                 <td>{{emp.gender }}</td>
-                <td ng-hide="check">{{emp.age }}</td>
+                <td ng-hide="check">{{emp.salary }}</td>
                 <td ng-show="check">###</td>
             </tr>
 

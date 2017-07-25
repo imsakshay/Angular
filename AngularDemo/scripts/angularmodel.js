@@ -2,14 +2,11 @@
 
 var app = angular
             .module("myModule", [])
-            .controller("myController", function ($scope) {
+            .controller("myController", function ($scope, $http) {
 
-                var employee = [
-                    { name: "kakashi", gender: "Male", age: 32 },
-                {name : "naruto" , gender : "Male", age : 21 },
-                {name : "sakura" , gender : "Female", age : 20 }
-
-                ]
-                $scope.employee = employee;
+                $http.get('EmployeeService.asmx/getAllEployees')
+                .then(function (response) {
+                    $scope.employees = response.data;
+                });
 
             });
